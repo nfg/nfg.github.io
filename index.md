@@ -1,12 +1,19 @@
 ---
 layout: zigazigha
 title: ZIGAZIG HA!
+active_header_tab: index
 ---
 
-This is a test.
+## This is a test. ##
 
-[This is a test.](/2013/11/19/dublin.html)
+{% for post in site.posts %}
+[{{ post.title }}]({{ post.url }})
+
+    {{ post.excerpt }}
+
+{% endfor %}
 
 This continues to be a test.
 
-Yarr. *Yarr*. **Yarr**.
+Yarr. *Yarr*. **Yarr**. ***YARR***.
+
