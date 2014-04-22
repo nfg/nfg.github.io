@@ -1,0 +1,30 @@
+---
+layout: zigazigha
+title: ZIGAZIG HA!
+active_header_tab: index
+paginate_path: "/page:num"
+---
+
+<h2>This is a test</h2>
+
+{% for post in paginator.posts %}
+<div>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <blockquote>{{ post.excerpt }}</blockquote>
+</div>
+{% endfor %}
+
+<div class="pagination">
+    {% if paginator.previous_page == 1 %}
+        <a href="/index.html">prev</a>
+    {% elsif paginator.previous_page %}
+        <a href="/page{{ paginator.previous_page }}">prev</a>
+    {% endif %}
+
+    Page: {{ paginator.page }} of {{ paginator.total_pages }}
+
+    {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}">next</a>
+    {% endif %}
+</div>
+
