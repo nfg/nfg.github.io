@@ -1,6 +1,6 @@
 {% include header.html %}
 
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">This too shall pass</a>
@@ -13,7 +13,7 @@
             </ul>
         </div>
     </div>
-</div>
+</nav>
 
 <div class="container" style="margin-top: 70px">
 
@@ -26,6 +26,13 @@
             {% if page.date %}<p>{{ page.date }}</p>{% endif %}
 
             {{ content }}
+
+            {% if site.related_posts %}
+                <h3>Related</h3>
+                <ul>
+                    {% for post in site.related_posts %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+                </ul>
+            {% endif %}
 
             {% include comments.html %}
 
