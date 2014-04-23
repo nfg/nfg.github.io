@@ -19,11 +19,12 @@
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-    {% else %}
+    {% endunless %}
+    {% if site.disable_comments %}
 
     <div>
         <h2>Disqus Comment Block Goes Here</h2>
         <p>Ordinarily there'd be some disqus comments here, but I'm disabling it because this site is in dev mode.</p>
     </div>
-    {% endunless %}
+    {% endif %}
 {% endunless %}
