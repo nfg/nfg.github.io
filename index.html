@@ -1,16 +1,14 @@
 ---
 layout: zigazigha
-title: ZIGAZIG HA!
+title: This Too Shall Pass
 active_header_tab: index
 paginate_path: "/page:num"
 disable_comments: true
 ---
 
-<h2>This is a test</h2>
-
 {% for post in paginator.posts %}
 <div>
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <blockquote>{{ post.excerpt }}</blockquote>
 </div>
 {% endfor %}
