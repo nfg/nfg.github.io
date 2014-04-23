@@ -1,4 +1,4 @@
-{% if page.disable_comments == false %}
+{% unless page.disable_comments %}
     {% unless site.disable_comments %}
 
     <div id="disqus_thread"></div>
@@ -26,4 +26,4 @@
         <p>Ordinarily there'd be some disqus comments here, but I'm disabling it because this site is in dev mode.</p>
     </div>
     {% endunless %}
-{% endif %}
+{% endunless %}
