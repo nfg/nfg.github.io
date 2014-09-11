@@ -23,7 +23,9 @@
     <div><img src="/images/banner/everything940.jpg" class="img-responsive" style="width: 100%" alt="The Rialto"/></div>
 
     <div class="row">
+        {% if page.wide %}{% else %}
         <div class="col-md-8">
+        {% endif %}
             <h1>{{ page.title }}</h1>
 
             {% if page.date %}<p>{{ page.date }}</p>{% endif %}
@@ -39,7 +41,12 @@
 
             {% include comments.html %}
 
+        {% if page.wide %}
+    </div>
+    <div class="row">
+        {% else %}
         </div>
+        {% endif %}
         <div class="col-md-4">
             <h3>Recent</h3>
             <div>
