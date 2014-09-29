@@ -1,6 +1,6 @@
 ---
 layout: zigazigha
-wide: 0
+wide: false
 title: Edjumacation
 date: September 17, 2014
 ---
